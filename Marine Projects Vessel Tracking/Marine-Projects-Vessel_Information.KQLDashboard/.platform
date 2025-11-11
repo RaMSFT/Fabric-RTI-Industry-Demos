@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "Marine-Projects-Vessel_Information",
+    "description": "Marine-Projects-Vessel_Information"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c6e7253a-3110-8181-477e-6acb4bbd4360"
+  }
+}

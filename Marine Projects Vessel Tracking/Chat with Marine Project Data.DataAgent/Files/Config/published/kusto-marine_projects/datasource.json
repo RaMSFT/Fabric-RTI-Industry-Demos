@@ -1,0 +1,426 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "49a9dcd5-633b-9a43-41e6-0eecfe2361a1",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "marine_projects",
+  "type": "kusto",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "34be155b-5e4c-4f8b-8c95-e5c5db2fa06f",
+      "is_selected": false,
+      "display_name": "bronze_vessel_events",
+      "type": "kusto.table",
+      "description": null,
+      "children": [
+        {
+          "id": "activity",
+          "is_selected": true,
+          "display_name": "activity",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "event_id",
+          "is_selected": true,
+          "display_name": "event_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "EventEnqueuedUtcTime",
+          "is_selected": true,
+          "display_name": "EventEnqueuedUtcTime",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "EventProcessedUtcTime",
+          "is_selected": true,
+          "display_name": "EventProcessedUtcTime",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "PartitionId",
+          "is_selected": true,
+          "display_name": "PartitionId",
+          "type": "kusto.column",
+          "data_type": "System.Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_data",
+          "is_selected": true,
+          "display_name": "sensor_data",
+          "type": "kusto.column",
+          "data_type": "System.Object",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "timestamp",
+          "is_selected": true,
+          "display_name": "timestamp",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_id",
+          "is_selected": true,
+          "display_name": "vessel_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lang",
+          "is_selected": true,
+          "display_name": "vessel_lang",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lat",
+          "is_selected": true,
+          "display_name": "vessel_lat",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_number",
+          "is_selected": true,
+          "display_name": "vessel_number",
+          "type": "kusto.column",
+          "data_type": "System.Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_source",
+          "is_selected": true,
+          "display_name": "vessel_source",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "d5fb199e-4c22-438a-baf8-c1050eebfcbb",
+      "is_selected": false,
+      "display_name": "gold_generator_data",
+      "type": "kusto.table",
+      "description": null,
+      "children": [
+        {
+          "id": "activity",
+          "is_selected": true,
+          "display_name": "activity",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "event_id",
+          "is_selected": true,
+          "display_name": "event_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_type",
+          "is_selected": true,
+          "display_name": "sensor_type",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_unit",
+          "is_selected": true,
+          "display_name": "sensor_unit",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_value",
+          "is_selected": true,
+          "display_name": "sensor_value",
+          "type": "kusto.column",
+          "data_type": "System.Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "timestamp",
+          "is_selected": true,
+          "display_name": "timestamp",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_id",
+          "is_selected": true,
+          "display_name": "vessel_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lang",
+          "is_selected": true,
+          "display_name": "vessel_lang",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lat",
+          "is_selected": true,
+          "display_name": "vessel_lat",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_source",
+          "is_selected": true,
+          "display_name": "vessel_source",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "28acaede-ffc0-4c21-8c63-afa5cbf7b8b6",
+      "is_selected": false,
+      "display_name": "gold_thrustors_data",
+      "type": "kusto.table",
+      "description": null,
+      "children": [
+        {
+          "id": "activity",
+          "is_selected": true,
+          "display_name": "activity",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "event_id",
+          "is_selected": true,
+          "display_name": "event_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_type",
+          "is_selected": true,
+          "display_name": "sensor_type",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_unit",
+          "is_selected": true,
+          "display_name": "sensor_unit",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_value",
+          "is_selected": true,
+          "display_name": "sensor_value",
+          "type": "kusto.column",
+          "data_type": "System.Int64",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "timestamp",
+          "is_selected": true,
+          "display_name": "timestamp",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_id",
+          "is_selected": true,
+          "display_name": "vessel_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lang",
+          "is_selected": true,
+          "display_name": "vessel_lang",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lat",
+          "is_selected": true,
+          "display_name": "vessel_lat",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_source",
+          "is_selected": true,
+          "display_name": "vessel_source",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "28f081cb-59a9-49e6-a0d0-952c05d7a444",
+      "is_selected": true,
+      "display_name": "silver_vessel_events",
+      "type": "kusto.table",
+      "description": null,
+      "children": [
+        {
+          "id": "activity",
+          "is_selected": true,
+          "display_name": "activity",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "event_id",
+          "is_selected": true,
+          "display_name": "event_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_type",
+          "is_selected": true,
+          "display_name": "sensor_type",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_unit",
+          "is_selected": true,
+          "display_name": "sensor_unit",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "sensor_value",
+          "is_selected": true,
+          "display_name": "sensor_value",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "timestamp",
+          "is_selected": true,
+          "display_name": "timestamp",
+          "type": "kusto.column",
+          "data_type": "System.DateTime",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_id",
+          "is_selected": true,
+          "display_name": "vessel_id",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lang",
+          "is_selected": true,
+          "display_name": "vessel_lang",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_lat",
+          "is_selected": true,
+          "display_name": "vessel_lat",
+          "type": "kusto.column",
+          "data_type": "System.Double",
+          "description": null,
+          "children": []
+        },
+        {
+          "id": "vessel_source",
+          "is_selected": true,
+          "display_name": "vessel_source",
+          "type": "kusto.column",
+          "data_type": "System.String",
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

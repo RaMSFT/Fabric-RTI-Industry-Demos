@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Reflex",
+    "displayName": "Activate Alerts and Signals"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "532e63e1-a702-ae51-488e-678ba5a2d6b1"
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "uniqueIdentifier": "d765794d-757a-49b6-a022-253938df8276",
+    "payload": {
+      "name": "EventStream",
+      "metadata": {
+        "eventstreamArtifactId": "a666ed08-f79f-4f1c-95b3-099f182e69e6"
+      }
+    },
+    "type": "eventstreamSource-v1"
+  },
+  {
+    "uniqueIdentifier": "4eff1664-f161-4e09-b3b8-85bfde1482c3",
+    "payload": {
+      "name": "EVS-Vessel-Events-stream event",
+      "definition": {
+        "type": "Event",
+        "instance": "{\"templateId\":\"SourceEvent\",\"templateVersion\":\"1.1\",\"steps\":[{\"name\":\"SourceEventStep\",\"id\":\"6aa8ec45-a1f2-4fec-8177-fe1148c7e30c\",\"rows\":[{\"name\":\"SourceSelector\",\"kind\":\"SourceReference\",\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"d765794d-757a-49b6-a022-253938df8276\"}]}]}]}"
+      }
+    },
+    "type": "timeSeriesView-v1"
+  },
+  {
+    "uniqueIdentifier": "b88c2242-e0b9-415a-9519-4871f02b7a71",
+    "payload": {
+      "name": "Maintenance Alerts",
+      "definition": {
+        "type": "Rule",
+        "instance": "{\"steps\":[{\"id\":\"7418c4a9-e5f8-4c00-825b-6b8015827e5d\",\"name\":\"FieldsDefaultsStep\",\"rows\":[{\"arguments\":[{\"arguments\":[{\"name\":\"entityId\",\"type\":\"string\",\"value\":\"4eff1664-f161-4e09-b3b8-85bfde1482c3\"}],\"kind\":\"EventReference\",\"name\":\"event\",\"type\":\"complex\"}],\"kind\":\"Event\",\"name\":\"EventSelector\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"sensor_data.maintenance.value\"},{\"name\":\"default\",\"type\":\"number\",\"value\":0},{\"name\":\"defaultType\",\"type\":\"string\",\"value\":\"Number\"}],\"kind\":\"EventFieldWithDefault\",\"name\":\"EventFieldWithDefaultSelector\"}]},{\"id\":\"aedee7d8-2ea1-403e-be82-543e7292c25e\",\"name\":\"EventDetectStep\",\"rows\":[{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"sensor_data.maintenance.value\"}],\"kind\":\"EventField\",\"name\":\"EventFieldSelector\"},{\"arguments\":[{\"name\":\"op\",\"type\":\"string\",\"value\":\"IsEqualTo\"},{\"name\":\"threshold\",\"type\":\"number\",\"value\":1}],\"kind\":\"NumberValueCondition\",\"name\":\"NumberValueCondition\"}]},{\"id\":\"0378cd71-652c-4a71-b7e7-8d0c00c7f98b\",\"name\":\"ActStep\",\"rows\":[{\"arguments\":[{\"name\":\"messageLocale\",\"type\":\"string\",\"value\":\"en-us\"},{\"name\":\"recipients\",\"type\":\"array\",\"values\":[{\"type\":\"string\",\"value\":\"admin@MngEnvMCAP691754.onmicrosoft.com\"}]},{\"name\":\"headline\",\"type\":\"array\",\"values\":[{\"name\":\"string\",\"type\":\"string\",\"value\":\"Vessel Maintenance Alerts\"}]},{\"name\":\"optionalMessage\",\"type\":\"array\",\"values\":[{\"name\":\"string\",\"type\":\"string\",\"value\":\"Vessel is undergoing a maintenance \"}]},{\"name\":\"additionalInformation\",\"type\":\"array\",\"values\":[{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"vessel_id\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"vessel_id\"}],\"kind\":\"EventFieldReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"},{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"vessel_number\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"vessel_number\"}],\"kind\":\"EventFieldReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"},{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"sensor_data.maintenance.value\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"sensor_data.maintenance.value\"}],\"kind\":\"EventFieldReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"},{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"sensor_data.battery_health.value\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"sensor_data.battery_health.value\"}],\"kind\":\"EventFieldReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"},{\"arguments\":[{\"name\":\"name\",\"type\":\"string\",\"value\":\"sensor_data.fueloil_percentage.value\"},{\"arguments\":[{\"name\":\"fieldName\",\"type\":\"string\",\"value\":\"sensor_data.fueloil_percentage.value\"}],\"kind\":\"EventFieldReference\",\"name\":\"reference\",\"type\":\"complexReference\"}],\"kind\":\"NameReferencePair\",\"type\":\"complex\"}]}],\"kind\":\"TeamsMessage\",\"name\":\"TeamsBinding\"}]}],\"templateId\":\"EventTrigger\",\"templateVersion\":\"1.2.3\"}",
+        "settings": {
+          "shouldRun": true,
+          "shouldApplyRuleOnUpdate": true,
+          "delayToleranceMs": 300000
+        }
+      }
+    },
+    "type": "timeSeriesView-v1"
+  }
+]

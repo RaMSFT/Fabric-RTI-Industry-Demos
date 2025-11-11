@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "Chat with Marine Project Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c15b0cd9-d075-9f08-47b9-43b9b62c57b0"
+  }
+}
