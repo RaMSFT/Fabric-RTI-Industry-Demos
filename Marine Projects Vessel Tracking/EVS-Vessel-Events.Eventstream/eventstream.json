@@ -1,0 +1,1419 @@
+{
+  "sources": [
+    {
+      "id": "66273e39-7d3d-4334-a574-8406ada60b20",
+      "name": "Custom-SRC-Vessel-Events",
+      "type": "CustomEndpoint",
+      "properties": {}
+    }
+  ],
+  "destinations": [
+    {
+      "id": "a827f3be-8c40-40c0-9f08-7f81f64bff64",
+      "name": "Marine-Project-Events",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "49a9dcd5-633b-9a43-41e6-0eecfe2361a1",
+        "databaseName": "marine_projects",
+        "tableName": "bronze_vessel_events",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "basic_transformation"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "basic_transformation",
+          "schema": {
+            "columns": [
+              {
+                "name": "timestamp",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "event_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "activity",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_number",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_source",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_lang",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "sensor_data",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "heel",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "role",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "trim",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "heave",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "pitch",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "moored",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "maintenance",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "weather",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "sailing",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "spog",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "wave_ht",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "water_tank1",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "water_tank2",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen1_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen2_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen3_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen4_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen1_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen2_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen3_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen4_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr1_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr2_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr3_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr4_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "fueloil_percentage",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "battery_health",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "EventProcessedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PartitionId",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "EventEnqueuedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "d765794d-757a-49b6-a022-253938df8276",
+      "name": "4OlNUbaYshRitcuMiKlKYk-a5a2d6b1-678b-488e-ae51-a702532e63e1",
+      "type": "Activator",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "532e63e1-a702-ae51-488e-678ba5a2d6b1",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "EVS-Vessel-Events-stream"
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "c7b3d9a8-7840-4a7b-8c91-0b217f7a7e93",
+      "name": "EVS-Vessel-Events-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Custom-SRC-Vessel-Events"
+        }
+      ]
+    }
+  ],
+  "operators": [
+    {
+      "name": "basic_transformation",
+      "type": "ManageFields",
+      "inputNodes": [
+        {
+          "name": "EVS-Vessel-Events-stream"
+        }
+      ],
+      "properties": {
+        "columns": [
+          {
+            "type": "Cast",
+            "properties": {
+              "targetDataType": "DateTime",
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "timestamp",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "timestamp"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "event_id",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "event_id"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "activity",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "activity"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "vessel_id",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "vessel_id"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "vessel_number",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "vessel_number"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "vessel_source",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "vessel_source"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "vessel_lat",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "vessel_lat"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "vessel_lang",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "vessel_lang"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "sensor_data",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "sensor_data"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "EventProcessedUtcTime",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "EventProcessedUtcTime"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "PartitionId",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "PartitionId"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
+                "columnName": "EventEnqueuedUtcTime",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "EventEnqueuedUtcTime"
+          }
+        ]
+      },
+      "inputSchemas": [
+        {
+          "name": "EVS-Vessel-Events-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "timestamp",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "event_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "activity",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_number",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_source",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_lat",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vessel_lang",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "sensor_data",
+                "type": "Record",
+                "fields": [
+                  {
+                    "name": "heel",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "role",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "trim",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "heave",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "pitch",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "Float",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "moored",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "maintenance",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "weather",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "sailing",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "spog",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "wave_ht",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "water_tank1",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "water_tank2",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen1_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen2_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen3_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen4_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen1_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen2_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen3_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "gen4_power",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr1_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr2_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr3_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "thr4_running",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "fueloil_percentage",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  },
+                  {
+                    "name": "battery_health",
+                    "type": "Record",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "type": "BigInt",
+                        "fields": null,
+                        "items": null
+                      },
+                      {
+                        "name": "unit",
+                        "type": "Nvarchar(max)",
+                        "fields": null,
+                        "items": null
+                      }
+                    ],
+                    "items": null
+                  }
+                ],
+                "items": null
+              },
+              {
+                "name": "EventProcessedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "PartitionId",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "EventEnqueuedUtcTime",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "compatibilityLevel": "1.1"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "marine_projects",
+    "description": "marine_projects"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "49a9dcd5-633b-9a43-41e6-0eecfe2361a1"
+  }
+}

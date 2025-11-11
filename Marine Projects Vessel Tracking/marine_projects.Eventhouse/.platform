@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "marine_projects",
+    "description": "marine_projects"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c4263d42-06a9-bf97-4aee-11c2e1f07f48"
+  }
+}

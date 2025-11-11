@@ -1,0 +1,28 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "3b9d0ec9-4064-4037-9f06-c15a683f655a",
+        "clusterUri": "https://trd-u41du6vfquzvv1h6zh.z7.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "fe2361a1-0eec-41e6-9a43-633b49a9dcd5",
+        "databaseItemName": "marine_projects"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "9b3c573f-7b4b-47d7-8b12-d65d405d486b",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "3b9d0ec9-4064-4037-9f06-c15a683f655a"
+      },
+      {
+        "id": "1bc6dad8-a0da-4ae7-9d6e-29d4439f5077",
+        "content": "// .alter table ... policy update: Defines an update policy for a table.\n// mv-expand kind=array sensor_data: Expands array elements in sensor_data into separate rows.\n// extend: Extracts sensor type, value, and unit from the array.\n// project: Selects only relevant columns for the silver table.\n// IsTransactional=true: Guarantees atomic updates.\n// PropagateIngestionProperties=false: Avoids copying ingestion metadata.\n\nbronze_vessel_events | limit 10\n\nbronze_vessel_events | mv-expand kind = array sensor_data | extend sensor_type = tostring(sensor_data[0]), sensor_value=tostring(sensor_data[1].value),\n sensor_unit=tostring(sensor_data[1].unit)| project timestamp, event_id, activity, vessel_id, vessel_source, vessel_lat, vessel_lang, sensor_type, \n sensor_value,sensor_unit\n\n.create table silver_vessel_events (\n    timestamp: datetime,\n    event_id: string,\n    activity: string,\n    vessel_id: string,\n    vessel_source: string ,\n    vessel_lat: real ,\n    vessel_lang: real ,\n    sensor_type: string,\n    sensor_value: string,\n    sensor_unit: string\n)\n\n\n// Alter the update policy for the table 'silver_vessel_events'\n// This policy automatically updates 'silver_vessel_events' whenever data arrives in 'bronze_vessel_events'\n// The query transforms nested sensor_data arrays into flattened columns for easier analytics\n\n.alter table silver_vessel_events policy update\n```[{\n    \"IsEnabled\": true, \n    \"Source\": \"bronze_vessel_events\",\n    \"Query\": \"bronze_vessel_events | mv-expand kind = array sensor_data | extend sensor_type = tostring(sensor_data[0]), sensor_value=tostring(sensor_data[1].value), sensor_unit=tostring(sensor_data[1].unit)| project timestamp, event_id, activity, vessel_id, vessel_source, vessel_lat, vessel_lang, sensor_type, sensor_value,sensor_unit\",\n    \"IsTransactional\": true,\n    \"PropagateIngestionProperties\": false\n}]```\n\n\n\n\n.create table gold_thrustors_data (\n    timestamp: datetime,\n    event_id: string,\n    activity: string,\n    vessel_id: string,\n    vessel_source: string ,\n    vessel_lat: real,\n    vessel_lang: real,\n    sensor_type: string,\n    sensor_value: long,\n    sensor_unit: string\n)\n\n\n// Alter the update policy for the 'gold_thrustors_data' table\n// This policy extracts thruster running status from 'silver_vessel_events'\n// It filters only sensor types for thrusters (thr1_running, thr2_running, thr3_running, thr4_running)\n// and converts sensor_value to a long for numeric analysis\n\n.alter table gold_thrustors_data policy update\n```[{\n    \"IsEnabled\": true,\n    \"Source\": \"silver_vessel_events\",\n    \"Query\": \"silver_vessel_events | where sensor_type in ('thr1_running', 'thr2_running', 'thr3_running', 'thr4_running') | project timestamp, event_id, activity, vessel_id, vessel_source, vessel_lat, vessel_lang, sensor_type, tolong(sensor_value),sensor_unit\",\n    \"IsTransactional\": true,\n    \"PropagateIngestionProperties\": false\n}]```\n\n\n.create table gold_generator_data (\n    timestamp: datetime,\n    event_id: string,\n    activity: string,\n    vessel_id: string,\n    vessel_source: string ,\n    vessel_lat: real,\n    vessel_lang: real,\n    sensor_type: string,\n    sensor_value: long,\n    sensor_unit: string\n)\n\n\n// Alter the update policy for the 'gold_generator_data' table\n// This policy derives generator runtime signals from 'silver_vessel_events'\n// It filters only sensor types matching 'gen{n}_running' (e.g., gen1_running, gen2_running)\n// and casts sensor_value to a long for consistent numeric analytics.\n\n.alter table gold_generator_data policy update\n```[{\n    \"IsEnabled\": true,\n    \"Source\": \"silver_vessel_events\",\n    \"Query\": \"silver_vessel_events| \nwhere sensor_type matches regex @'gen[0-9]+_running' | \nproject timestamp, event_id, activity, vessel_id, vessel_source, vessel_lat, vessel_lang, sensor_type, tolong(sensor_value),sensor_unit\n\",\n    \"IsTransactional\": true,\n    \"PropagateIngestionProperties\": false\n}]```\n\n",
+        "title": "update policies",
+        "dataSourceId": "3b9d0ec9-4064-4037-9f06-c15a683f655a"
+      }
+    ]
+  }
+}

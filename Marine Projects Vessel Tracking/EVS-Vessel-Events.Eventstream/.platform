@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "EVS-Vessel-Events"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "182e69e6-099f-95b3-4f1c-f79fa666ed08"
+  }
+}

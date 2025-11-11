@@ -1,0 +1,287 @@
+{
+  "schema_version": 63,
+  "tiles": [
+    {
+      "id": "1a4b1137-0f2a-44b6-8ce3-fd3c0cb1a295",
+      "title": "Vessels-Map",
+      "visualType": "map",
+      "pageId": "9668fd7b-157e-4794-9e69-0d9f5baa025e",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 17,
+        "height": 10
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "6cdc37fb-a888-4c53-a6a8-de5901f7620f"
+      },
+      "visualOptions": {
+        "map__latitudeColumn": "vessel_lat",
+        "map__longitudeColumn": "vessel_lang",
+        "map__labelColumn": null,
+        "map__sizeColumn": null,
+        "map__sizeDisabled": true,
+        "map__geoType": "numeric",
+        "map__geoPointColumn": null
+      }
+    },
+    {
+      "id": "66eb423d-e136-4b45-bb21-44e66d3c22c3",
+      "title": "Status of the Vessels",
+      "visualType": "table",
+      "pageId": "9668fd7b-157e-4794-9e69-0d9f5baa025e",
+      "layout": {
+        "x": 17,
+        "y": 0,
+        "width": 7,
+        "height": 10
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "9ebea209-2cce-4490-881d-f84c788ebc1b"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [
+          {
+            "urlColumn": "URL",
+            "displayColumn": "vessel_id",
+            "disabled": false
+          }
+        ],
+        "colorRules": [
+          {
+            "id": "b01a2733-7e78-465b-8866-5a62af3f2f16",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              {
+                "operator": "==",
+                "column": "sensor_type",
+                "values": [
+                  "maintenance"
+                ]
+              },
+              {
+                "operator": "==",
+                "column": "sensor_value",
+                "values": [
+                  "1"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          },
+          {
+            "id": "6c13e6b8-b128-4d05-a7e9-c64e8ec513b7",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": "==",
+                "column": "sensor_type",
+                "values": [
+                  "sailing"
+                ]
+              },
+              {
+                "operator": "==",
+                "column": "sensor_value",
+                "values": [
+                  "1"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "green",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d53d29ef-869c-4c1d-a500-61ecf7bb48b9",
+      "title": "Thrustors Information",
+      "visualType": "line",
+      "pageId": "9668fd7b-157e-4794-9e69-0d9f5baa025e",
+      "layout": {
+        "x": 0,
+        "y": 10,
+        "width": 24,
+        "height": 9
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "e8c408d5-cdbb-466a-b467-4500a8aa2ef5"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "dataPointsTooltip": {
+          "all": true,
+          "limit": 5
+        }
+      }
+    },
+    {
+      "id": "91310afb-c1ee-4c88-9be3-5ef1160b5e4c",
+      "title": "fuel percentage",
+      "visualType": "line",
+      "pageId": "9668fd7b-157e-4794-9e69-0d9f5baa025e",
+      "layout": {
+        "x": 0,
+        "y": 19,
+        "width": 24,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8c205102-2a31-4b66-98e7-594d5493ba0c"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "3bdf9071-0c80-40b5-8ef1-4b82791e2a51",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "",
+      "database": "49a9dcd5-633b-9a43-41e6-0eecfe2361a1",
+      "name": "marine_projects",
+      "id": "09f98b3e-ba73-4d51-ab8e-ffe78c7c5973",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "9668fd7b-157e-4794-9e69-0d9f5baa025e"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "09f98b3e-ba73-4d51-ab8e-ffe78c7c5973"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nbronze_vessel_events | distinct vessel_id, todouble(vessel_lat), todouble(vessel_lang)",
+      "id": "6cdc37fb-a888-4c53-a6a8-de5901f7620f",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "09f98b3e-ba73-4d51-ab8e-ffe78c7c5973"
+      },
+      "text": "\nsilver_vessel_events\n| where timestamp > ago(12h)\n| where sensor_type in (\"sailing\", \"maintenance\")\n| extend URL = strcat(\"https://app.fabric.microsoft.com/groups/cfc8471d-90f7-4fa5-9788-2de88b4c77c9/kustodashboards/4bbd4360-6acb-477e-8181-3110c6e7253a?experience=fabric-developer&extensionScenario=openArtifact&v-_startTime=1hours&v-_endTime=now&page=04b90622-7d6d-4bba-80f7-17058f444352&v-vessel_id=v-\", vessel_id)\n| extend Clickable_URL = strcat(\"<a href='\", URL, \"'>\", vessel_id, \"</a>\")\n| summarize latest_value = arg_max(timestamp, sensor_value) by vessel_id, sensor_type, sensor_value, URL,Clickable_URL \n| where sensor_value == 1\n| project vessel_id, sensor_type, sensor_value,  URL,Clickable_URL \n",
+      "id": "9ebea209-2cce-4490-881d-f84c788ebc1b",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "09f98b3e-ba73-4d51-ab8e-ffe78c7c5973"
+      },
+      "text": "silver_vessel_events\n| where sensor_type matches regex @'thr[0-9]+_running' and sensor_value == 1\n| summarize thrusters_running = count() by event_time=timestamp, vessel_id\n| order by event_time asc\n\n",
+      "id": "e8c408d5-cdbb-466a-b467-4500a8aa2ef5",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "09f98b3e-ba73-4d51-ab8e-ffe78c7c5973"
+      },
+      "text": "silver_vessel_events\n| where sensor_type == \"fueloil_percentage\"\n| summarize avg_fuel_percentage = avg(tolong(sensor_value)) by bin(timestamp, 10m), vessel_id\n| order by timestamp asc",
+      "id": "8c205102-2a31-4b66-98e7-594d5493ba0c",
+      "usedVariables": []
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "schema_version": 63,
+  "tiles": [
+    {
+      "id": "6e76d0db-b6e2-4f1d-8c4e-9bed7e354a44",
+      "title": "Active Thrustors ",
+      "visualType": "line",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 0,
+        "y": 12,
+        "width": 13,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "433c9206-b83e-4e9b-a68b-9b6cdecd9828"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": [
+              {
+                "id": "5fc9c9fd-3da7-41bc-821a-78a7d23023db",
+                "value": 2
+              },
+              {
+                "id": "1cf89d09-9af3-4bf7-afaf-970306e1ed21",
+                "value": 4
+              }
+            ]
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "bacab8c8-6b10-4b26-ad62-206d6ca50f0d",
+      "title": "Heel",
+      "visualType": "line",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 13,
+        "y": 4,
+        "width": 11,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "e3e96be5-69ca-49e9-aa38-cb7e5f53d8ef"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": [
+              {
+                "id": "1d705dfb-d333-4b91-a313-e1c12c38c25d",
+                "value": -5
+              },
+              {
+                "id": "6e60f2af-4e00-4a1c-a1a4-3d42a8716c4e",
+                "value": 5
+              }
+            ]
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "4aa8fe10-d660-4eb8-a4dd-bc6eb2ace58d",
+      "title": "Role",
+      "visualType": "line",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 13,
+        "y": 8,
+        "width": 11,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "25089037-dc71-4a69-ac10-cdf2ff0f2f0a"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": [
+              {
+                "id": "f4b35f70-944d-4a0f-b0f3-75bbc077b87e",
+                "value": -20
+              },
+              {
+                "id": "109fd43b-99dc-40bb-b201-ccaa1442d318",
+                "value": 20
+              }
+            ]
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "654abf89-a9ed-4d29-b199-ae4b663382a0",
+      "title": "Trim",
+      "visualType": "line",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 13,
+        "y": 0,
+        "width": 11,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d73a2648-9636-4572-b2e3-24f37a2c4942"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": [
+              {
+                "id": "b2fbb352-195e-4899-a341-6dd0111e2498",
+                "value": -5
+              },
+              {
+                "id": "0143f103-ee4d-4259-903a-e7ff8a96a954",
+                "value": 5
+              }
+            ]
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "8ae2d8b9-2cde-425e-8564-9ed2ffd0d5e4",
+      "title": "Heave",
+      "visualType": "line",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 13,
+        "y": 12,
+        "width": 11,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8dd0c896-1b19-4969-aadf-c12a46acd413"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": [
+              {
+                "id": "aae5d3eb-89f0-461f-96bc-1a729de40a40",
+                "value": -2
+              },
+              {
+                "id": "de3efd1a-92bd-4ab8-8c09-15fb38b425da",
+                "value": 2
+              }
+            ]
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "f0f01b25-af24-4018-bd2e-2e908ba5a7f1",
+      "title": "Last Maintenance",
+      "visualType": "card",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 7,
+        "y": 7,
+        "width": 6,
+        "height": 5
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "643df8c3-04c8-490f-93de-4777f1d9c695"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "last_maintenance_time",
+        "colorRulesDisabled": false,
+        "colorRules": [
+          {
+            "id": "b825dd36-b29d-49c0-ade8-0afc466e9136",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "values": [
+                  "180"
+                ],
+                "operator": "<=",
+                "column": "time_since_maintenance"
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "card"
+          }
+        ]
+      }
+    },
+    {
+      "id": "54fa5d29-dcd1-4bd0-a3d6-4f768d36c490",
+      "title": "Weather Condition Reported",
+      "visualType": "card",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 7,
+        "y": 2,
+        "width": 6,
+        "height": 5
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "7491ae61-5746-4268-b62f-f5f76aa93a9a"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": "last_weather_reported",
+        "colorRulesDisabled": false,
+        "colorRules": [
+          {
+            "id": "64fa3bf7-bf68-4b14-96bc-c46fb429c92a",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              {
+                "operator": "<=",
+                "column": "time_since_weather_reported",
+                "values": [
+                  "180"
+                ]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": "warning",
+            "ruleName": "",
+            "visualType": "card"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c3f4314d-dbdc-4606-8efc-13149cc24452",
+      "title": "Vessel Information",
+      "visualType": "markdown",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 7,
+        "y": 0,
+        "width": 6,
+        "height": 2
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "6e11d6a8-6eb1-4b50-9a78-dbccc07838fd"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "724d7247-01db-404a-92a4-770c09b6353d",
+      "title": "New tile",
+      "visualType": "markdownCard",
+      "pageId": "04b90622-7d6d-4bba-80f7-17058f444352",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 7,
+        "height": 12
+      },
+      "markdownText": "## 🛳️ Marine Projects - Vessel Tracking \nThis dashboard integrates live event streams and synthetic data to monitor vessel movements, sources, and operational KPIs.\n\n![vessel](https://raw.githubusercontent.com/RaMSFT/public-images/431875fee4a5b92b3115bf8de7774f33f0fe0894/marine-project-image.png?raw=true)\n*Figure: Real-time vessel tracking visualization powered by Microsoft Fabric RTI.*\n\n",
+      "visualOptions": {}
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "string",
+      "id": "4bdfb23c-0e7b-49bd-8aac-28b5d2db758d",
+      "displayName": "vessel Identifier",
+      "description": "",
+      "variableName": "vessel_id",
+      "selectionType": "scalar",
+      "includeAllOption": false,
+      "defaultValue": {
+        "kind": "query-result"
+      },
+      "dataSource": {
+        "kind": "query",
+        "columns": {
+          "value": "vessel_id",
+          "label": "vessel_id"
+        },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "89ddca29-6996-4940-80ec-1d444f0e6934"
+        }
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    },
+    {
+      "kind": "duration",
+      "id": "d21f172d-691e-4319-b112-fd1759a68e5a",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "",
+      "database": "49a9dcd5-633b-9a43-41e6-0eecfe2361a1",
+      "name": "marine_projects",
+      "id": "27f85752-5ea0-4d4d-82fa-569331d69d93",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Vessel Information",
+      "id": "04b90622-7d6d-4bba-80f7-17058f444352"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vesel_id_v = ['vessel_id'];\n\n\nsilver_vessel_events\n| where vessel_id == vesel_id_v\n| where sensor_type matches regex @\"thr[0-9]+_running\"\n| where sensor_value == 1\n| summarize thrusters_running = count() by event_time = bin(timestamp, 2m), vessel_id\n| order by event_time asc\n\n",
+      "id": "433c9206-b83e-4e9b-a68b-9b6cdecd9828",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\nsilver_vessel_events\n| where vessel_id == vessel_id_v\n| where sensor_type in (\"heel\")\n| summarize thrusters_running = avg(toreal(sensor_value)) by event_time = bin(timestamp, 2m), vessel_id, sensor_type\n| order by event_time asc\n",
+      "id": "e3e96be5-69ca-49e9-aa38-cb7e5f53d8ef",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\nsilver_vessel_events\n| where vessel_id == vessel_id_v\n| where sensor_type in (\"role\")\n| summarize thrusters_running = avg(toreal(sensor_value)) by event_time = bin(timestamp, 2m), vessel_id, sensor_type\n| order by event_time asc\n",
+      "id": "25089037-dc71-4a69-ac10-cdf2ff0f2f0a",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\nsilver_vessel_events\n| where vessel_id == vessel_id_v\n| where sensor_type in (\"trim\")\n| summarize thrusters_running = avg(toreal(sensor_value)) by event_time = bin(timestamp, 2m), vessel_id, sensor_type\n| order by event_time asc\n",
+      "id": "d73a2648-9636-4572-b2e3-24f37a2c4942",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\nsilver_vessel_events\n| where vessel_id == vessel_id_v\n| where sensor_type in (\"heave\")\n| summarize thrusters_running = avg(toreal(sensor_value)) by event_time = bin(timestamp, 2m), vessel_id, sensor_type\n| order by event_time asc\n",
+      "id": "8dd0c896-1b19-4969-aadf-c12a46acd413",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\n\n\nsilver_vessel_events\n| where vessel_id  == vessel_id_v\n| where sensor_type == \"maintenance\" and sensor_value == 1\n| summarize last_maintenance_time = max(timestamp) by vessel_id\n| extend time_since_maintenance = datetime_diff('minute', now(), last_maintenance_time)\n\n",
+      "id": "643df8c3-04c8-490f-93de-4777f1d9c695",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\n\nlet vessel_id_v = ['vessel_id'];\n\n\n\nsilver_vessel_events\n| where vessel_id  == vessel_id_v\n| where sensor_type == \"weather\" and sensor_value == 1\n| summarize last_weather_reported = max(timestamp) by vessel_id\n| extend time_since_weather_reported = datetime_diff('minute', now(), last_weather_reported)\n\n",
+      "id": "7491ae61-5746-4268-b62f-f5f76aa93a9a",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | where isempty(['vessel_id']) or <column name> == ['vessel_id'] // Single selection filtering\n// | take 100\nlet vessel_id_v = ['vessel_id'];\n\n\nbronze_vessel_events\n| where vessel_id == vessel_id_v\n| project vessel_info = strcat(\"**Id:** \", tostring(vessel_id), \", **Number:** \", tostring(vessel_number), \", **Source:** \", tostring(vessel_source))\n| take 1",
+      "id": "6e11d6a8-6eb1-4b50-9a78-dbccc07838fd",
+      "usedVariables": [
+        "vessel_id"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "27f85752-5ea0-4d4d-82fa-569331d69d93"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nsilver_vessel_events\n| distinct vessel_id",
+      "id": "89ddca29-6996-4940-80ec-1d444f0e6934",
+      "usedVariables": []
+    }
+  ]
+}
