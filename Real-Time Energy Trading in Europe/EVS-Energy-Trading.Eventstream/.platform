@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "EVS-Energy-Trading"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "06f11cc3-cc6e-9ab1-4d51-526bb2c64c17"
+  }
+}

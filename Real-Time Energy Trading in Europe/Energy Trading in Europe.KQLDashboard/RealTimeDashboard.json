@@ -1,0 +1,395 @@
+{
+  "schema_version": 63,
+  "tiles": [
+    {
+      "id": "4eac2a3e-78fd-4034-a2b0-92ecf338a3c6",
+      "title": "New tile",
+      "hideTitle": true,
+      "description": "Average Hourly emissions",
+      "visualType": "markdown",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 14,
+        "y": 4,
+        "width": 10,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "57ec49ba-5ab9-4e29-89d6-e333cb0d71b2"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "93d1547a-d77f-4d7b-b623-cd080bd1b8f2",
+      "title": "New tile",
+      "hideTitle": true,
+      "description": "Average Hourly emissions",
+      "visualType": "markdown",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 19,
+        "y": 0,
+        "width": 5,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3d3aabaa-4c96-42e3-9308-2b0b2a3aa548"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "87a5ce57-eccf-406f-8819-3b61bb282e03",
+      "title": "New tile",
+      "hideTitle": true,
+      "description": "Average Hourly emissions",
+      "visualType": "markdown",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 14,
+        "y": 0,
+        "width": 5,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "360959aa-e1ca-45b5-8a72-6d9977119d59"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "imageAllowlist": ""
+      }
+    },
+    {
+      "id": "a0470f41-2c60-45d5-ab62-c8177a249c18",
+      "title": "Real-Time Net Electricity Flow Per Capita",
+      "visualType": "map",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 7,
+        "y": 0,
+        "width": 7,
+        "height": 8
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "87d36faa-493a-4055-bab4-c3786961b32b"
+      },
+      "visualOptions": {
+        "map__latitudeColumn": "latitude",
+        "map__longitudeColumn": null,
+        "map__labelColumn": "country",
+        "map__sizeColumn": "difference",
+        "map__sizeDisabled": true,
+        "map__geoType": "numeric",
+        "map__geoPointColumn": null
+      }
+    },
+    {
+      "id": "500375f3-c271-46ca-a73a-4f3cc9841c54",
+      "title": "Ream-Time Energy Production Mix (MWh)",
+      "visualType": "stackedarea",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 0,
+        "y": 8,
+        "width": 6,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "af48ab2b-c1df-4e87-85b7-91255cb261b6"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "71435a7b-93aa-49f6-99cc-60b287e9bf19",
+      "title": "Emissions by Energy source (ktCO2e)",
+      "visualType": "stackedarea",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 6,
+        "y": 8,
+        "width": 6,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "fcddba70-ae1a-47dc-96aa-d6aa5d9fff6f"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "38a5ef00-f4bf-4c8b-b819-88627dcee380",
+      "title": "Energy Production vs Consumption (All Sources)",
+      "visualType": "stackedarea",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 12,
+        "y": 8,
+        "width": 6,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2f7d0a1f-e285-4611-a06f-243f92a9c436"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": "timestamp",
+        "yColumns": [
+          "total_production",
+          "total_consumption"
+        ],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "2cc220ff-05d0-4b4e-a50c-d64fac928312",
+      "title": "Hourly prices (EUR/MWh)",
+      "visualType": "line",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 18,
+        "y": 8,
+        "width": 6,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "320a4219-b204-4998-aebd-af8a005f6e37"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "75bb7b24-3033-4222-aa71-8de49b01666e",
+      "title": "Energy Trading in Europe",
+      "visualType": "markdownCard",
+      "pageId": "509feb90-c821-4081-82e9-c138b12e0e26",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 7,
+        "height": 8
+      },
+      "markdownText": "![Contoso Energy](https://raw.githubusercontent.com/RaMSFT/public-images/62c7a5db5a67bacb7793b5f7a567d1337a5d5790/Energy_Trading_Across_Europe.png?raw=true)",
+      "visualOptions": {}
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "2758d447-9e13-4794-863c-d5586b69be82",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "scopeId": "kusto-trident",
+      "clusterUri": "",
+      "database": "e2b89e58-e5f3-a625-4ff9-301980cb3e5c",
+      "name": "EVH-Energy-Trading",
+      "id": "eb0599ed-f322-4454-a60a-11578fb9b7fb",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "509feb90-c821-4081-82e9-c138b12e0e26"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// add additonal text to the result \"Avergae hourly emissions\" and in the end \"ktCO2\"\n//\nsilver_trading_events\n// | where timestamp >= ago(3d)\n| summarize avgHourlyEmission = round(avg(co2_emission) / 1000, 2) by bin(timestamp, 1h)\n| extend resultText = strcat(\"## Average hourly emissions\\n # **\", avgHourlyEmission, \"** ktCO2\")\n| top 1 by timestamp desc\n",
+      "id": "57ec49ba-5ab9-4e29-89d6-e333cb0d71b2",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// get the latest day share\n//\nlet renewableSources = dynamic([\"solar\", \"wind\", \"thermal\"]);\nlet renewable = silver_trading_events\n| where source in (renewableSources) \n// and timestamp >= ago(3d)\n| summarize renewableProduction=sum(production) by bin(timestamp, 1d);\nlet total = silver_trading_events\n| summarize totalProductionAll=sum(production) by bin(timestamp, 1d);\nrenewable\n| join kind=inner (total) on $left.timestamp == $right.timestamp\n| top 1 by timestamp desc\n| project timestamp, renewableShare=renewableProduction * 100.0 / totalProductionAll\n| project renewableShare, resultText = strcat(\"## Share of Renewables\\n # \", round(renewableShare,2), \"%\")",
+      "id": "3d3aabaa-4c96-42e3-9308-2b0b2a3aa548",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// get the latest day share\n//\n// This KQL query was generated by AI:\n// get latest days average price\n//\nsilver_trading_events\n// | where timestamp >= ago(3d)\n| summarize avgDailyPrice=avg(hourly_price) by day=bin(timestamp, 1d)\n| project day, resultText = strcat(\"## Avergae Price\\n # \", round(avgDailyPrice,1), \"EUR/MWh\")\n| top 1 by day desc \n",
+      "id": "360959aa-e1ca-45b5-8a72-6d9977119d59",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// add an extra column if the difference less than 1000 red, between 1000 to 1500 orange, 1500 to 200 is yellow and rest are green\n//\nsilver_trading_events\n| extend day=bin(timestamp, 1d)\n| summarize latestDay=max(day) by country\n| join kind=inner (\n    silver_trading_events\n    | extend day=bin(timestamp, 1d)\n    | summarize totalProduction=sum(production), totalConsumption=sum(consumption), latitude=max(latitude), longitude=max(longitude) by country, day\n) on country\n| where latestDay == day\n| extend difference=totalProduction - totalConsumption\n| extend differenceColor=case(\n    difference < 1200, 'red',\n    difference >= 1200 and difference < 1700, 'orange',\n    difference >= 1700 and difference < 2200, 'yellow',\n    'green'\n)\n| project country, latitude, longitude, totalProduction, totalConsumption, difference, differenceColor",
+      "id": "87d36faa-493a-4055-bab4-c3786961b32b",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// Get total energy production for every hours by the source\n//\nsilver_trading_events\n| where timestamp < ago(2h) \n| summarize totalProduction=sum(production)/100 by source, hour=bin(timestamp, 8h)",
+      "id": "af48ab2b-c1df-4e87-85b7-91255cb261b6",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// for every 8 h\n//\nsilver_trading_events\n| where timestamp < ago(2h)\n| summarize total_co2_emission=sum(co2_emission)/1000 by source, bin(timestamp, 8h)",
+      "id": "fcddba70-ae1a-47dc-96aa-d6aa5d9fff6f",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// energy prudction vs consumption by source per every 8 hours\n//\nsilver_trading_events\n| where timestamp < ago(2h)\n| summarize total_production=sum(production)/100, total_consumption=sum(consumption)/100 by source, bin(timestamp, 8h)",
+      "id": "2f7d0a1f-e285-4611-a06f-243f92a9c436",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "eb0599ed-f322-4454-a60a-11578fb9b7fb"
+      },
+      "text": "// This KQL query was generated by AI:\n// get avergae price per hour\n//\nsilver_trading_events\n| summarize avgPricePerHour=avg(hourly_price) by bin(timestamp, 1h)",
+      "id": "320a4219-b204-4998-aebd-af8a005f6e37",
+      "usedVariables": []
+    }
+  ]
+}

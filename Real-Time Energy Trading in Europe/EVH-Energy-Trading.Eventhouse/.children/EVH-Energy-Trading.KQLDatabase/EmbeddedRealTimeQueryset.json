@@ -1,0 +1,28 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "d90ff3be-82d7-46c9-a016-128c6ac1ae5f",
+        "clusterUri": "https://trd-4ybuhyp2t3fwncra61.z3.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "80cb3e5c-3019-4ff9-a625-e5f3e2b89e58",
+        "databaseItemName": "EVH-Energy-Trading"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "14b7bb0a-7eae-4f63-bb3f-05aab8de2e82",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "d90ff3be-82d7-46c9-a016-128c6ac1ae5f"
+      },
+      {
+        "id": "7669f054-170a-403f-84b0-bfc15e6a6632",
+        "content": "\n// Update policy from bronze to silver\n// Create table script\n.create table silver_trading_events (\n    timestamp: datetime,\n    event_id: string,\n    source: string,\n    country: string,\n    capital: string,\n    latitude: real,\n    longitude: real,\n    production: int,\n    consumption: int,\n    co2_emission: int,\n    hourly_price: int\n)\n\n// test query\nbronze_trading_events \n| extend sensor_data_parsed = parse_json(sensor_data) \n| evaluate bag_unpack(sensor_data_parsed) \n| extend timestamp = todatetime(timestamp) \n| project timestamp, tostring(event_id), tostring(source), tostring(country), tostring(capital), toreal(latitude), toreal(longitude), toint(production), toint(consumption), toint(co2_emission), toint(hourly_price)\n\nbronze_trading_events\n| take 100\n\n\n\n\n// Update policy code\n.alter table silver_trading_events policy update\n```[{\n    \"IsEnabled\": true,\n    \"Source\": \"bronze_trading_events\",\n    \"Query\": \"bronze_trading_events | extend sensor_data_parsed = parse_json(sensor_data) | evaluate bag_unpack(sensor_data_parsed) | extend timestamp = todatetime(timestamp) | project timestamp, tostring(event_id), tostring(source), tostring(country), tostring(capital), toreal(latitude), toreal(longitude), toint(production), toint(consumption), toint(co2_emission), toint(hourly_price)\",\n    \"IsTransactional\": true,\n    \"PropagateIngestionProperties\": false\n}]```",
+        "title": "update policies",
+        "dataSourceId": "d90ff3be-82d7-46c9-a016-128c6ac1ae5f"
+      }
+    ]
+  }
+}

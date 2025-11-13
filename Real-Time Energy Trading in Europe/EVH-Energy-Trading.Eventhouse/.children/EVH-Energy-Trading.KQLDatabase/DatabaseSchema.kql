@@ -1,0 +1,7 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table bronze_trading_events (timestamp:datetime, event_id:string, source:string, sensor_data:dynamic, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 
+.create-merge table silver_trading_events (timestamp:datetime, event_id:string, source:string, country:string, capital:string, latitude:real, longitude:real, production:int, consumption:int, co2_emission:int, hourly_price:int) 
+.alter table silver_trading_events policy update "[{\"IsEnabled\":true,\"Source\":\"bronze_trading_events\",\"Query\":\"bronze_trading_events | extend sensor_data_parsed = parse_json(sensor_data) | evaluate bag_unpack(sensor_data_parsed) | extend timestamp = todatetime(timestamp) | project timestamp, tostring(event_id), tostring(source), tostring(country), tostring(capital), toreal(latitude), toreal(longitude), toint(production), toint(consumption), toint(co2_emission), toint(hourly_price)\",\"IsTransactional\":true,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null}]"

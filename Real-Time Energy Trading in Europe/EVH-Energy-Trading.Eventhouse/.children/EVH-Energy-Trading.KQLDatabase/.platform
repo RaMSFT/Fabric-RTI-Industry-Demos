@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "EVH-Energy-Trading",
+    "description": "EVH-Energy-Trading"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e2b89e58-e5f3-a625-4ff9-301980cb3e5c"
+  }
+}
