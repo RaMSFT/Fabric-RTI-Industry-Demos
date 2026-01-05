@@ -69,7 +69,7 @@ evh_name = "enter Event Hub name Here"
 evh_conn_string = "eneter Event Hub Connection String"
 ```
 - Replace placeholder values with:
-  1. Open the Event House
+  1. Open the Event Stream
   2. Click on on Source and navigate to and click on **SAS Key Authentication**
   3. Copy the Event hub name value and paste into the notebook variable **evh_name**
   4. Copy the Connection string-primary key value (click on eye symbol first) and paste into the notebook variable **evh_conn_string**
