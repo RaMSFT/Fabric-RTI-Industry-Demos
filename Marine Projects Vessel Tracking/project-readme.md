@@ -61,7 +61,7 @@ Follow these steps to connect your Fabric workspace to a GitHub repository:
 # Step 3: 📝 Update the Notebook with Eventhouse Connection Details
 
  **Action Required:**  
-Open your Fabric notebook and update the connection details for **Eventhouse**:
+Open your Fabric notebook and update the connection details for **Event Stream**:
 
 - Navigate to the **connection cell** in your notebook.
 ```
